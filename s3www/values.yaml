@@ -8,3 +8,19 @@ deployment:
 service:
   type: ClusterIP
   port: 8080
+
+ingress:
+  minioConsole:
+    host: con.minio.cluster.local
+    backend:
+      service: app1-minio
+      port: 9001
+  minioApi: 
+    host: api.minio.cluster.local
+    backend:
+      service: app1-minio
+      port: 9000
+  s3www: 
+    host: app1.cluster.local
+    backend:
+      service: app1-s3www

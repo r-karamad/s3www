@@ -1,0 +1,41 @@
+{{- $fullName := include "s3www.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "s3wwww.labels" . | nindent 4 }}
+spec:
+  rules:
+    - host: {{ .Values.ingress.minioConsole.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.ingress.minioConsole.backend.service }}
+                port: 
+                  number: {{ .Values.ingress.minioConsole.backend.port }}
+    - host: {{ .Values.ingress.minioApi.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.ingress.minioApi.backend.service }}
+                port: 
+                  number: {{ .Values.ingress.minioApi.backend.port }}
+    - host: {{ .Values.ingress.s3www.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ $fullName }}
+                port: 
+                  number: {{ $svcPort }}
