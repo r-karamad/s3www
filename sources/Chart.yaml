@@ -1,0 +1,6 @@
+apiVersion: v2
+name: sources
+description: A Helm chart for s3wwww
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
