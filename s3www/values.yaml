@@ -1,4 +1,10 @@
-replicaCount: 1
-image:
-  repository: y4m4/s3www
-  tag: "latest"
+deployment:
+  replicaCount: 1
+  image:
+    repository: y4m4/s3www
+    tag: "latest"
+  containerPort: 8080
+
+service:
+  type: ClusterIP
+  port: 80

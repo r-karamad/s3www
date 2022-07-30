@@ -6,7 +6,7 @@ metadata:
   labels:
     {{- include "s3www.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.deployment.replicaCount }}
   selector:
     matchLabels:
       {{- include "s3www.selectorLabels" . | nindent 6 }}
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
           args:
           - "-endpoint"
           - "http://my-release-minio.default.svc.cluster.local:9000"
@@ -31,5 +31,5 @@ spec:
           - "0.0.0.0:8080"
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: deployment.containerPort
               protocol: TCP
