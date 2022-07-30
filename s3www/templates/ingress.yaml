@@ -7,7 +7,7 @@ metadata:
   name: {{ $fullName }}
   namespace: {{ .Release.Namespace | quote }}
   labels:
-    {{- include "s3wwww.labels" . | nindent 4 }}
+    {{- include "s3www.labels" . | nindent 4 }}
 spec:
   rules:
     - host: {{ .Values.ingress.minioConsole.host }}
