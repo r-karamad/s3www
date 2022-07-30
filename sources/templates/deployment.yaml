@@ -18,7 +18,7 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args:
-          - "-endpointls http://my-release-minio.default.svc.cluster.local:9000"
+          - "-endpoint http://my-release-minio.default.svc.cluster.local:9000"
           - "-accessKey kara"
           - "-secretKey Go@d1ife"
           - "-bucket test" 
