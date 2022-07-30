@@ -1,16 +1,14 @@
 apiVersion: v1
 entries:
-  s3www:
+  sources:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-07-30T18:33:43.804554645+02:00"
-    description: A helm chart for s3www
-    digest: b41451b7cd191545bb6a2a52d05740b4da07d7e9affb6485bde401852c7801f6
-    name: s3www
-    sources:
-    - https://r-karamad.github.io/s3www/
+    created: "2022-07-30T22:27:34.858377873+02:00"
+    description: A Helm chart for s3wwww
+    digest: d85a0c2c8c42f2588d38c05de94e80548e66419a3ae7bb2f5115443b0f3da43d
+    name: sources
     type: application
     urls:
     - https://r-karamad.github.io/s3www/charts/s3www-0.1.0.tgz
     version: 0.1.0
-generated: "2022-07-30T18:33:43.804012664+02:00"
+generated: "2022-07-30T22:27:34.858145133+02:00"
