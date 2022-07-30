@@ -20,7 +20,7 @@ spec:
           args:
           - "-endpoint"
           - "http://my-release-minio.default.svc.cluster.local:9000"
-          - "-accessKey"
+          - "-accessKey" 
           - "kara"
           - "-secretKey"
           - "Go@d1ife"
