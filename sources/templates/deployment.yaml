@@ -16,9 +16,13 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "y4m4/s3www:latest"
           args:
+<<<<<<< HEAD
           - "-endpoint http://my-release-minio.default.svc.cluster.local:9000"
+=======
+          - "-endpoint "http://my-release-minio.default.svc.cluster.local:9000"
+>>>>>>> 209d6edb7b2bd0f79ab286bfd983f4cbf5d78b80
           - "-accessKey kara"
           - "-secretKey Go@d1ife"
           - "-bucket test" 
