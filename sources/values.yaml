@@ -1,1 +1,5 @@
 replicaCount: 1
+image:
+  repository: y4m4/s3www
+  pullPolicy: IfNotPresent
+  tag: latest

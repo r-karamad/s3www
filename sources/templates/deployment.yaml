@@ -16,18 +16,13 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "y4m4/s3www:latest"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args:
-          - "-endpoint"
-          - "http://my-release-minio.default.svc.cluster.local:9000"
-          - "-accessKey" 
-          - "kara"
-          - "-secretKey"
-          - "Go@d1ife"
-          - "-bucket"
-          - "test" 
-          - "-address"
-          - "0.0.0.0:8080"
+          - "-endpoint http://my-release-minio.default.svc.cluster.local:9000"
+          - "-accessKey kara"
+          - "-secretKey Go@d1ife"
+          - "-bucket test" 
+          - "-address 0.0.0.0:8080"
           ports:
             - name: http
               containerPort: 8080
