@@ -4,20 +4,19 @@ metadata:
   name: {{ include "s3www.fullname" . }}
   labels:
     {{- include "s3www.labels" . | nindent 4 }}
-    app: s3www
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: s3www
+      {{- include "test.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: s3www
+        {{- include "test.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "y4m4/s3www:latest"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args:
           - "-endpoint"
           - "http://my-release-minio.default.svc.cluster.local:9000"
