@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "s3www.fullname" . }}
   labels:
-    {{- include "test.labels" . | nindent 4 }}
+    {{- include "s3www.labels" . | nindent 4 }}
     app: s3www
 spec:
   replicas: {{ .Values.replicaCount }}
