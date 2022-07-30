@@ -31,5 +31,5 @@ spec:
           - "0.0.0.0:8080"
           ports:
             - name: http
-              containerPort: {{ .Values.deployment.containerPort }}
+              containerPort: {{ .Values.s3www.port }}
               protocol: TCP

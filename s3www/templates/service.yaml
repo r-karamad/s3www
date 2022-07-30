@@ -8,7 +8,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.deployment.targetPort }}
+      targetPort: {{ .Values.s3www.port }}
       protocol: TCP
       name: http
   selector:
