@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s3wwww
+  name: s3www
   labels:
     app: s3www
 spec:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: y4m4/s3www:latest
+          image: "y4m4/s3www:latest"
           args:
           - "-endpoint"
           - "http://my-release-minio.default.svc.cluster.local:9000"
