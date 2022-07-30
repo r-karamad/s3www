@@ -8,11 +8,11 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "test.selectorLabels" . | nindent 6 }}
+      {{- include "s3www.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "test.selectorLabels" . | nindent 8 }}
+        {{- include "s3www.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
