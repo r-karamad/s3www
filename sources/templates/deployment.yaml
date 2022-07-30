@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default latest }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args:
           - "-endpoint"
           - "http://my-release-minio.default.svc.cluster.local:9000"
