@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s3www
+  name: {{ include "test.fullname" . }}
   labels:
     app: s3www
 spec:
