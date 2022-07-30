@@ -11,6 +11,6 @@ entries:
     - https://r-karamad.github.io/s3www/
     type: application
     urls:
-    - https://r-karamad.github.io/s3www/charts/s3www-0.1.0.tgz
+    - https://r-karamad.github.io/s3www/s3www-0.1.0.tgz
     version: 0.1.0
 generated: "2022-07-30T18:33:43.804012664+02:00"
