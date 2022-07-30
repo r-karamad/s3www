@@ -3,8 +3,9 @@ deployment:
   image:
     repository: y4m4/s3www
     tag: "latest"
-  containerPort: 8080
-
+  targetPort: 8080
+    
 service:
   type: ClusterIP
   port: 8080
+  targetPort: 8080
