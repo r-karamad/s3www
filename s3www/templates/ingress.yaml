@@ -7,26 +7,26 @@ metadata:
     {{- include "s3www.labels" . | nindent 4 }}
 spec:
   rules:
-    - host: {{ .Values.ingress.minioConsole.host }}
+    - host: {{ .Values.ingress.minio.console.host }}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.ingress.minioConsole.backend.service }}
+                name: {{ .Values.ingress.minio.service }}
                 port: 
-                  number: {{ .Values.ingress.minioConsole.backend.port }}
-    - host: {{ .Values.ingress.minioApi.host }}
+                  number: {{ .Values.ingress.minio.console.port }}
+    - host: {{ .Values.ingress.minio.api.host }}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.ingress.minioApi.backend.service }}
+                name: {{ .Values.ingress.minio.service }}
                 port: 
-                  number: {{ .Values.ingress.minioApi.backend.port }}
+                  number: {{ .Values.ingress.minio.api.port }}
     - host: {{ .Values.ingress.s3www.host }}
       http:
         paths:
