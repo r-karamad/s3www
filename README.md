@@ -9,8 +9,6 @@ s3www deployment in k8s
 2. Initial Setup and update /etc/hosts
    ```shell
    ./prepare.sh
-   ```
-   ```shell
    sudo ./etchosts.sh
    ```
 3. Apply terraform
