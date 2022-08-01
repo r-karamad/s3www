@@ -7,17 +7,14 @@ s3www deployment in k8s
    git clone git@github.com:r-karamad/s3www.git
    ```
 2. Initial Setup
-Run s3www/prepare.sh to setup Minikube and bootstrap the cluster.
    ```shell
    ./s3www/prepare.sh
    ./s3www/etchosts.sh
 ```
-
-Go to s3www/terraform/devlopment and run terraform init
-and then terraform apply --auto-approve
-
-Two helm charts are used to deploy the application
-1. Minio
-2. s3www
-
-Nginx Ingress Contrlller is used.
+2. Apply terraform
+   ```shell
+   cd ./s3www/terraform/development
+   terraform init
+   terraform plan
+   terraform apply --auto-approve
+```
