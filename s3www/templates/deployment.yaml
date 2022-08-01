@@ -26,7 +26,7 @@ spec:
           - "-secretKey"
           - "Go@d1ife"
           - "-bucket"
-          - "test" 
+          - "s3www" 
           - "-address"
           - "0.0.0.0:8080"
           ports:
