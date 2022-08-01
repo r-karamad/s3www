@@ -20,7 +20,7 @@ spec:
           image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
           args:
           - "-endpoint"
-          - "http://{{ include "s3www.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:9000"
+          - "http://{{ .Values.ingress.minio.service }}.{{ .Release.Namespace }}.svc.cluster.local:9000"
           - "-accessKey"
           - {{ .Values.deployment.minio.accessKey | quote }}
           - "-secretKey"
