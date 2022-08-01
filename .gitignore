@@ -5,13 +5,10 @@
 
 ### Terraform ###
 # Local .terraform directories
-**/.terraform/*
+terraform/devlopment/.terraform/*
 
 # .tfstate files
-production/*.tfstate
-production/*.tfstate
-development/*.tfstate.*
-development/*.tfstate.*
+terraform/development/*.tfstate
 
 # Crash log files
 crash.log

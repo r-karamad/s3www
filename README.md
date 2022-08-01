@@ -19,3 +19,5 @@ s3www deployment in k8s
    terraform apply --auto-approve
    ```
 
+Useful links:
+https://github.com/bitnami/charts/tree/master/bitnami/minio
