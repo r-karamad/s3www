@@ -5,12 +5,9 @@
 
 minikube_ip
 
-### Terraform ###
-# Local .terraform directories
-terraform/devlopment/.terraform/*
-
-# .tfstate files
-terraform/development/*.tfstate
+terraform/devlopment/.terraform/
+*.terraform*
+*.tfstate
 
 # Crash log files
 crash.log
