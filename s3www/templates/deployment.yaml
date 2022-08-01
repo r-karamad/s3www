@@ -20,7 +20,7 @@ spec:
           image: "{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}"
           args:
           - "-endpoint"
-          - "http://minio.ten1.svc.cluster.local:9000"
+          - "http://minio.playground.svc.cluster.local:9000"
           - "-accessKey" 
           - "kara"
           - "-secretKey"
