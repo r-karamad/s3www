@@ -3,6 +3,8 @@
 .idea/
 .vscode/
 
+minikube_ip
+
 ### Terraform ###
 # Local .terraform directories
 terraform/devlopment/.terraform/*
