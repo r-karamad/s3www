@@ -9,11 +9,10 @@ s3www deployment in k8s
 2. Initial Setup
 Run s3www/prepare.sh to setup Minikube and bootstrap the cluster.
    ```shell
-   ./prepare.sh
-   ```
+   ./s3www/prepare.sh
+   ./s3www/etchosts.sh
+```
 
-
-Run s3www/etchosts.sh to add required A-records to local hosts file.
 Go to s3www/terraform/devlopment and run terraform init
 and then terraform apply --auto-approve
 
