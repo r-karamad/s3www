@@ -4,7 +4,7 @@ s3www deployment in k8s
 # Usage
 1. Clone the repository
    ```shell
-   git clone git@github.com/idealo/transport_layer7routing
+   git clone git@github.com:r-karamad/s3www.git
    ```
 2. Initial Setup
 Run s3www/prepare.sh to setup Minikube and bootstrap the cluster.
