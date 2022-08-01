@@ -10,11 +10,12 @@ s3www deployment in k8s
    ```shell
    ./s3www/prepare.sh
    ./s3www/etchosts.sh
-```
-2. Apply terraform
+   ```
+3. Apply terraform
    ```shell
    cd ./s3www/terraform/development
    terraform init
    terraform plan
    terraform apply --auto-approve
-```
+   ```
+
