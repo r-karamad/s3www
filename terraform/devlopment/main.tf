@@ -56,3 +56,7 @@ module minio_setup {
   minio_s3www_secret_key       = var.minio_s3www_secret_key
   depends_on                  = [helm_release.s3www]
 }
+
+output "homepage" {
+  value = "Endpoint: ${module.minio_setup.minio_api_ep}"
+}
