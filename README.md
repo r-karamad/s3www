@@ -23,7 +23,7 @@ By default these credentials are configured but it is recommended to change them
    ```shell
 export TF_VAR_minio_root_access_key="minioadmin" TF_VAR_minio_root_secret_key="minioadmin"
 export TF_VAR_minio_s3www_access_key="s3wwwadmin" TF_VAR_minio_s3www_secret_key="s3wwwadmin"
-   ```shell
+   ```
 
 Useful links:
 https://github.com/bitnami/charts/tree/master/bitnami/minio
