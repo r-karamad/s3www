@@ -58,5 +58,6 @@ module minio_setup {
 }
 
 output "homepage" {
-  value = "Endpoint: ${module.minio_setup.minio_api_ep}"
+  value = "Endpoint: ${var.minio_api_ep}:${data.kubernetes_service.ingress_svc.spec[0].port.0.node_port}"
+  depends_on = [module.minio_setup]
 }

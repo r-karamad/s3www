@@ -41,7 +41,7 @@ minikube addons enable ingress
 kubectl cluster-info
 
 echo "Setting /etc/hosts ..."
-minikube ip >> minikube_ip
+minikube ip > minikube_ip
 
 echo "Setting variables ..."
 export TF_VAR_minio_root_access_key="minioadmin" TF_VAR_minio_root_secret_key="minioadmin"
