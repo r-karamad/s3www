@@ -8,7 +8,7 @@ if ! [ -x "$(command -v kubectl)" ]; then
   sudo apt-get update
   sudo apt-get install -y kubectl
 else
-  echo "👍 ubectl is already installed!"
+  echo "👍 kubectl is already installed!"
 fi
 
 if ! [ -x "$(command -v kvm)" ]; then
