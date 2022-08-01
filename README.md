@@ -15,7 +15,7 @@ s3www deployment in k8s
    ```
 3. Apply terraform
    ```shell
-   cd ./terraform/development
+   cd terraform/development
    terraform init
    terraform plan
    terraform apply --auto-approve
