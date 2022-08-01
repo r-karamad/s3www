@@ -6,7 +6,7 @@ s3www deployment in k8s
    ```shell
    git clone git@github.com:r-karamad/s3www.git && cd s3www
    ```
-2. Initial Setup
+2. Initial Setup and update /etc/hosts
    ```shell
    ./prepare.sh
    ```
