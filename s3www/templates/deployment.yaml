@@ -22,7 +22,7 @@ spec:
           - "-endpoint"
           - "http://minio.ten1.svc.cluster.local:9000"
           - "-accessKey" 
-          - "kara"
+          - "admin"
           - "-secretKey"
           - "Go@d1ife"
           - "-bucket"
