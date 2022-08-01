@@ -19,7 +19,7 @@ s3www deployment in k8s
    terraform apply --auto-approve
    ```
 4. Change credentials
-By default these credentials are configured but it is recommended to change them to more secure values however.
+<br> By default these credentials are configured but it is recommended to change them to more secure values however.
    ```shell
    export TF_VAR_minio_root_access_key="minioadmin" TF_VAR_minio_root_secret_key="minioadmin"
    export TF_VAR_minio_s3www_access_key="s3wwwadmin" TF_VAR_minio_s3www_secret_key="s3wwwadmin"
