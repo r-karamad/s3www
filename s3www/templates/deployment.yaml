@@ -22,11 +22,11 @@ spec:
           - "-endpoint"
           - "http://{{ include "s3www.fullname" . }}.{{ .Release.Namespace }}.svc.cluster.local:9000"
           - "-accessKey" 
-          - "kara"
+          - "{{ .Values.deployment.minio.accessKey }}
           - "-secretKey"
-          - "Go@d1ife"
+          - "{{ .Values.deployment.minio.secretKey }}
           - "-bucket"
-          - "s3www" 
+          - "{{ .Values.deployment.minio.bucket }}
           - "-address"
           - "0.0.0.0:8080"
           ports:

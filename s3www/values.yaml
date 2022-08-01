@@ -4,6 +4,10 @@ deployment:
     repository: y4m4/s3www
     tag: "latest"
   targetPort: 8080
+  minio:
+    accessKey: "admin"
+    secretKey: "admin"
+    bucket: "s3www" 
     
 service:
   type: ClusterIP
